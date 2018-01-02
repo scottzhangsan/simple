@@ -18,6 +18,7 @@ public class CountryTest {
 	@BeforeClass
 	public static void init(){
 		try {
+			//读取xml文件
 			Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
 		     sqlSessionFactory =new SqlSessionFactoryBuilder().build(reader);
 		     reader.close();
@@ -30,6 +31,7 @@ public class CountryTest {
 	}
 	@Test
 	public void testSelectAll(){
+		//打开sqlsession
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		List<Country> countries =sqlSession.selectList("selectAll") ;
 		printCountryList(countries);
