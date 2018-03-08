@@ -1,5 +1,5 @@
 package tk.mybatis.simple.model;
-
+//1111
 public class Country {
 	
 	private Long id ;
